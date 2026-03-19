@@ -4,12 +4,10 @@
     --dim-text: #888888;
     --accent-line: #222222;
     --font-main: 'Inter', sans-serif;
-    --font-title: 'Montserrat', sans-serif; /* Changed to Sans-Serif */
+    --font-title: 'Montserrat', sans-serif;
 }
 
-* {
-    box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
     background-color: var(--bg-color);
@@ -26,17 +24,14 @@ body {
     padding: 0 30px;
 }
 
-/* Header Styling */
-header {
-    padding: 140px 0 80px 0;
-}
+header { padding: 140px 0 80px 0; }
 
 .project-title {
     font-family: var(--font-title);
-    font-size: 4.5rem; /* Large and Bold */
+    font-size: 4.5rem;
     font-weight: 800;
     margin: 0;
-    letter-spacing: -3px; /* Modern tight tracking */
+    letter-spacing: -3px;
     line-height: 0.9;
     text-transform: uppercase;
 }
@@ -56,16 +51,9 @@ header {
     font-size: 0.75rem;
 }
 
-.author {
-    font-size: 1.2rem;
-    font-weight: 400;
-    margin: 8px 0 0 0;
-}
+.author { font-size: 1.2rem; font-weight: 400; margin: 8px 0 0 0; }
 
-/* Video Layout */
-.video-wrapper {
-    margin: 60px 0;
-}
+.video-wrapper { margin: 60px 0; }
 
 .video-container {
     position: relative;
@@ -78,28 +66,18 @@ header {
 
 .video-container iframe {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: 0; left: 0; width: 100%; height: 100%;
 }
 
-/* Typography for Content */
-.text-content {
-    margin: 120px 0;
-}
+.text-content { margin: 120px 0; }
 
-h2 {
+h2, .section-headline {
     font-family: var(--font-title);
     font-weight: 700;
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    letter-spacing: -0.5px;
+    font-size: 2.5rem; /* Large Headline Size */
+    margin-bottom: 30px;
+    letter-spacing: -1px;
     text-transform: uppercase;
-}
-
-.result-headline {
-    margin-top: 100px;
     border-top: 1px solid var(--accent-line);
     padding-top: 40px;
 }
@@ -111,24 +89,12 @@ p {
     margin-bottom: 50px;
 }
 
-/* Placeholder Spacing */
-.placeholder-section {
-    margin: 100px 0;
-}
+.placeholder-space { height: 200px; }
 
-.placeholder-headline {
-    color: var(--dim-text);
-    font-size: 1.2rem;
-}
-
-.placeholder-space {
-    height: 100px;
-}
-
-/* Footer */
 footer {
-    padding: 120px 0 60px 0;
+    padding: 60px 0;
     text-align: left;
+    border-top: 1px solid var(--accent-line);
 }
 
 footer p {
@@ -138,7 +104,6 @@ footer p {
     color: #444;
 }
 
-/* Design Effort: Animation */
 .fade-in {
     animation: fadeIn 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
 }
@@ -150,5 +115,5 @@ footer p {
 
 @media (max-width: 600px) {
     .project-title { font-size: 2.8rem; letter-spacing: -1px; }
-    header { padding: 80px 0 40px 0; }
+    h2, .section-headline { font-size: 1.8rem; }
 }

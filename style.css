@@ -1,11 +1,10 @@
-/* Custom Properties for a Clean Look */
 :root {
     --bg-color: #080808;
     --text-color: #ffffff;
-    --dim-text: #a0a0a0;
-    --accent-line: #333333;
+    --dim-text: #888888;
+    --accent-line: #222222;
     --font-main: 'Inter', sans-serif;
-    --font-title: 'Playfair Display', serif;
+    --font-title: 'Montserrat', sans-serif; /* Changed to Sans-Serif */
 }
 
 * {
@@ -27,42 +26,45 @@ body {
     padding: 0 30px;
 }
 
-/* Header Styling - Minimalist and Bold */
+/* Header Styling */
 header {
-    padding: 120px 0 60px 0;
+    padding: 140px 0 80px 0;
 }
 
 .project-title {
     font-family: var(--font-title);
-    font-size: 4rem;
-    font-weight: 700;
+    font-size: 4.5rem; /* Large and Bold */
+    font-weight: 800;
     margin: 0;
-    letter-spacing: -2px;
+    letter-spacing: -3px; /* Modern tight tracking */
+    line-height: 0.9;
+    text-transform: uppercase;
 }
 
 .meta {
-    margin-top: 20px;
-    border-left: 1px solid var(--accent-line);
+    margin-top: 30px;
+    border-left: 2px solid var(--text-color);
     padding-left: 20px;
 }
 
 .subtitle {
-    font-weight: 300;
+    font-weight: 400;
     text-transform: uppercase;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
     color: var(--dim-text);
     margin: 0;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
 }
 
 .author {
-    font-size: 1.1rem;
-    margin: 5px 0 0 0;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 8px 0 0 0;
 }
 
-/* Video Embedding - Responsive 16:9 */
+/* Video Layout */
 .video-wrapper {
-    margin: 80px 0;
+    margin: 60px 0;
 }
 
 .video-container {
@@ -71,6 +73,7 @@ header {
     height: 0;
     overflow: hidden;
     background: #111;
+    border: 1px solid var(--accent-line);
 }
 
 .video-container iframe {
@@ -81,64 +84,71 @@ header {
     height: 100%;
 }
 
-/* Text Formatting */
+/* Typography for Content */
 .text-content {
-    margin: 100px 0;
+    margin: 120px 0;
 }
 
 h2 {
     font-family: var(--font-title);
-    font-style: italic;
-    font-size: 2rem;
-    margin-bottom: 25px;
-    color: var(--text-color);
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+    text-transform: uppercase;
+}
+
+.result-headline {
+    margin-top: 100px;
+    border-top: 1px solid var(--accent-line);
+    padding-top: 40px;
 }
 
 p {
-    font-size: 1.15rem;
-    line-height: 1.8;
-    color: #e0e0e0;
-    margin-bottom: 40px;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #cccccc;
+    margin-bottom: 50px;
 }
 
-/* Placeholders */
+/* Placeholder Spacing */
 .placeholder-section {
-    margin: 120px 0;
+    margin: 100px 0;
 }
 
 .placeholder-headline {
-    border-bottom: 1px solid var(--accent-line);
-    padding-bottom: 10px;
+    color: var(--dim-text);
+    font-size: 1.2rem;
 }
 
 .placeholder-space {
-    height: 150px; /* Provides the "empty space" requested */
+    height: 100px;
 }
 
 /* Footer */
 footer {
-    padding: 100px 0 50px 0;
-    border-top: 1px solid var(--accent-line);
-    text-align: center;
+    padding: 120px 0 60px 0;
+    text-align: left;
 }
 
 footer p {
-    font-size: 0.8rem;
-    color: var(--dim-text);
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #444;
 }
 
-/* Simple Fade-in Animation for "Design Effort" */
+/* Design Effort: Animation */
 .fade-in {
-    animation: fadeIn 1.5s ease-out forwards;
+    animation: fadeIn 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
+    from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Mobile Adjustments */
 @media (max-width: 600px) {
-    .project-title { font-size: 2.5rem; }
-    header { padding: 60px 0 30px 0; }
+    .project-title { font-size: 2.8rem; letter-spacing: -1px; }
+    header { padding: 80px 0 40px 0; }
 }
